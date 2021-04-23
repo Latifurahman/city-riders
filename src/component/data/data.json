@@ -3,23 +3,23 @@
   "name": "Bike",
   "fare": 100,
   "capacity": 1,
-  "image": "https://img.favpng.com/3/0/2/bike-cartoon-png-favpng-UmMQEAXXZay8S7kd0mbXivH5B.jpg"
+  "image": "https://images.carandbike.com/bike-images/medium/ktm/rc-200/ktm-rc-200.webp?v=14"
 }, {
   "id": 2,
   "name": "Car",
   "fare": 210,
   "capacity": 4,
-  "image": "https://i.pinimg.com/736x/66/3f/ac/663facc597e38c0e3fd8ef6cb76467ec.jpg"
+  "image": "https://thumbs.dreamstime.com/b/yellow-vector-lamborghini-12705341.jpg"
 }, {
   "id": 3,
   "name": "Bus",
   "fare": 30,
   "capacity": 36,
-  "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBn2_APqcLIZ0dEBD_6Rvk3H5NEUEC0cYTVw&usqp=CAU"
+  "image": "https://www.autocarpro.in/Utils/ImageResizer.ashx?n=http://img.haymarketsac.in/autocarpro/d9ad9530-c2b0-4e79-bddf-e5649326854b.jpg&h=490&w=735"
 }, {
   "id": 4,
   "name": "Train",
   "fare": 20,
   "capacity": 300,
-  "image": "https://banner2.cleanpng.com/20180209/jyw/kisspng-train-rail-transport-passenger-car-clip-art-cartoon-cute-old-steam-train-5a7dbc8aeda826.7937923515181897069735.jpg"
+  "image": "https://thumbs.dreamstime.com/b/bullet-train-isolated-white-background-d-render-51057180.jpg"
 }]

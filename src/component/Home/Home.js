@@ -1,13 +1,19 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Nav, Navbar } from 'react-bootstrap';
 import mainImg from '../images/city.jpg';
 import './Home.css';
+import ridersData from '../data/data.json';
+import Riders from '../Riders/Riders';
 
 const Home = () => {
-    
+    const [riders, setRiders] = useState([]);
+    useEffect(() =>{
+        setRiders(ridersData);
+    }, [])
+
     return (
         <div>
-            <Navbar expand="lg" className="navbar">
+           <Navbar expand="lg" className="navbar">
                 <div className="container">
                     <Navbar.Brand  className="text-warning logo" href="/home">City Riders</Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -22,9 +28,16 @@ const Home = () => {
                     </Navbar.Collapse>
                 </div>
             </Navbar>
-                <div className="main-img">
+            <div className="main-img">
                     <img src={mainImg} className="img-fluid" alt=""/>
+                    <div className="riders">
+                        {
+                    riders.map(rider => <Riders rider={rider}></Riders>)
+                    }
+                    </div>
+                    
                 </div>
+                
         </div>
     );
 };
