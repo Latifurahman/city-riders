@@ -1,0 +1,25 @@
+[{
+  "id": 1,
+  "name": "Bike",
+  "fare": 100,
+  "capacity": 1,
+  "image": "https://img.favpng.com/3/0/2/bike-cartoon-png-favpng-UmMQEAXXZay8S7kd0mbXivH5B.jpg"
+}, {
+  "id": 2,
+  "name": "Car",
+  "fare": 210,
+  "capacity": 4,
+  "image": "https://i.pinimg.com/736x/66/3f/ac/663facc597e38c0e3fd8ef6cb76467ec.jpg"
+}, {
+  "id": 3,
+  "name": "Bus",
+  "fare": 30,
+  "capacity": 36,
+  "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBn2_APqcLIZ0dEBD_6Rvk3H5NEUEC0cYTVw&usqp=CAU"
+}, {
+  "id": 4,
+  "name": "Train",
+  "fare": 20,
+  "capacity": 300,
+  "image": "https://banner2.cleanpng.com/20180209/jyw/kisspng-train-rail-transport-passenger-car-clip-art-cartoon-cute-old-steam-train-5a7dbc8aeda826.7937923515181897069735.jpg"
+}]

@@ -1,23 +1,17 @@
-import logo from './logo.svg';
 import './App.css';
+import Home from './component/Home/Home';
+import ridersData from './component/data/data.json';
+import { useEffect, useState } from 'react';
 
 function App() {
+  const [riders, setRiders] = useState([]);
+  useEffect(() =>{
+    setRiders(ridersData);
+    console.log(ridersData);
+  }, [])
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Home></Home>
     </div>
   );
 }
