@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import ridersData from '../data/data.json';
+import Riders from '../Riders/Riders';
+import './Home.css';
 
 const Home = () => {
     const [riders, setRiders] = useState([]);
@@ -8,8 +10,10 @@ const Home = () => {
         console.log(ridersData)
     }, []);
     return (
-        <div>
-            <h1>this is home {riders.name}</h1>
+        <div className="riders-container">
+            {
+                riders.map(rider => <Riders rider={rider}></Riders>)
+            }
         </div>
     );
 };

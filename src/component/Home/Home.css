@@ -1,0 +1,7 @@
+.riders-container{
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-left: 25px;
+    text-align: center;
+}
