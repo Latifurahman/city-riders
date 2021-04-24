@@ -1,0 +1,33 @@
+.nav ul li a{
+    text-decoration: none;
+}
+.nav ul{
+    list-style: none;
+}
+.logo{
+    height: 100px;
+    margin-right: 300px;
+}
+.header{
+    height: 600px;
+    background-position: center center;
+}
+.nav{
+    margin-left: 5%;
+    margin-right: 5%;
+}
+.nav li{
+    display: inline-block;
+    margin-left: 50px;
+}
+.nav li a{
+    color: rgb(231, 216, 216);
+    font-size: 18px;
+}
+.nav li a:hover{
+    color: #fff;
+    border-bottom: 2px solid #fff;
+}
+.nav li .active{
+    border-bottom: 2px solid #fff;
+}
