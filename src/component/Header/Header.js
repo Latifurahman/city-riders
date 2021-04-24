@@ -29,7 +29,10 @@ const Header = () => {
                     </li>
                 </ul>
             </nav>
-            
+            <div className="title">
+                <h1>Find your ride</h1>
+                <p>Our service is best in the city. It's safe and secure. We ensure your privacy.</p>
+            </div>
         </div>
     );
 };

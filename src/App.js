@@ -3,27 +3,24 @@ import Header from './component/Header/Header';
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
 import Home from './component/Home/Home';
-import NoMatch from './component/NoMatch/NoMatch';
+import Login from './component/Login/Login';
 
 function App() {
   return (
       <Router>
+        <Header></Header>
          <Switch>
-          <Route>
-            <Header></Header>
-          </Route>
           <Route path="/home">
             <Home></Home>
           </Route>
+          <Route path="/login">
+            <Login></Login>
+          </Route>
           <Route exact path="/">
             <Home></Home>
-          </Route>
-          <Route path="*">
-            <NoMatch />
           </Route>
         </Switch>
       </Router>

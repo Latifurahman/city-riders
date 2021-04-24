@@ -1,9 +1,15 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import ridersData from '../data/data.json';
 
 const Home = () => {
+    const [riders, setRiders] = useState([]);
+    useEffect(() =>{
+        setRiders(ridersData);
+        console.log(ridersData)
+    }, []);
     return (
         <div>
-            <h1>This is home component</h1>
+            <h1>this is home {riders.name}</h1>
         </div>
     );
 };
