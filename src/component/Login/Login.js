@@ -100,9 +100,11 @@ const Login = () => {
             setUser(newUserInfo)
         }
 };
+
 const history = useHistory();
-const handleLoginManagement = () => {
-    history.push('/loginManagement')
+
+const handleDestination = () => {
+    history.push('/destinationInfo')
 }
     return (
         <div className="form-container">
@@ -116,7 +118,7 @@ const handleLoginManagement = () => {
                 <p className="password-warning"><small>* At least 5 digits, 1 number required. </small></p>
                 <br/>
                 <input type="password" name="confirm-password" id="" onBlur={handleBlur} placeholder="Confirm Password" required/>
-                <input type="submit" value="Create an account" className="submit"/>
+                <input onClick={handleDestination} type="submit" value="Create an account" className="submit"/>
                 <p>Already have an account? <Link to="loginManagement"  className="login-small">Login</Link></p> 
                 <p style={{color: 'red'}}>{user.error}</p>
             </form>
