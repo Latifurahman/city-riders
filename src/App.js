@@ -9,6 +9,7 @@ import Home from './component/Home/Home';
 import Login from './component/Login/Login';
 import Rider from './component/Rider/Rider';
 import Destination from './component/Destination/Destination';
+import LoginManagement from './component/LoginManagement/LoginManagement';
 
 function App() {
   return (
@@ -23,6 +24,9 @@ function App() {
           </Route>
           <Route path="/rider">
             <Rider></Rider>
+          </Route>
+          <Route path="/loginManagement">
+            <LoginManagement></LoginManagement>
           </Route>
           <Route exact path="/">
             <Home></Home>

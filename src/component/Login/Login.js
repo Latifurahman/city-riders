@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import './Login.css';
 import Facebook from '@material-ui/icons/Facebook';
 import firebase from "firebase/app";
@@ -22,7 +22,8 @@ const Login = () => {
     const [user, setUser] = useState({
         name: '',
         email: '',
-        password: ''
+        password: '',
+        error: ''
     })
     
     
@@ -62,8 +63,22 @@ const Login = () => {
   });
     }
 
-    const handleSubmit = () => {
-
+    const handleSubmit = (event) => {
+        if(user.name && user.email && user.password){
+            firebase.auth().createUserWithEmailAndPassword(user.email, user.password)
+  .then((res) => {
+      const newUserInfo = {...user};
+      newUserInfo.error = '';
+      setUser(newUserInfo);
+    var user = res.user;
+  })
+  .catch((error) => {
+      const newUserInfo = {...user};
+      newUserInfo.error = error.message;
+      setUser(newUserInfo);
+  });
+        }
+        event.preventDefault();
     }
     
     const handleBlur = (event) => {
@@ -76,12 +91,19 @@ const Login = () => {
             const passwordHasNumber = /\d{1}/.test(event.target.value);
             isFormValid = isPasswordValid && passwordHasNumber;
         }
+        if(event.target.name === 'name'){
+            isFormValid = event.target.value;
+        }
         if(isFormValid){ 
             const newUserInfo = {...user};
             newUserInfo[event.target.name] = event.target.value;
             setUser(newUserInfo)
         }
 };
+const history = useHistory();
+const handleLoginManagement = () => {
+    history.push('/loginManagement')
+}
     return (
         <div className="form-container">
             <h3>Create an account</h3>
@@ -95,7 +117,8 @@ const Login = () => {
                 <br/>
                 <input type="password" name="confirm-password" id="" onBlur={handleBlur} placeholder="Confirm Password" required/>
                 <input type="submit" value="Create an account" className="submit"/>
-                <p>Already have an account? <Link className="login-small" to="/login-management">Login</Link></p> 
+                <p>Already have an account? <Link to="loginManagement"  className="login-small">Login</Link></p> 
+                <p style={{color: 'red'}}>{user.error}</p>
             </form>
             <div className="form-bottom">
                 <p><hr/> Or <hr/></p>
