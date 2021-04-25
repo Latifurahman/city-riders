@@ -7,7 +7,6 @@ const Home = () => {
     const [riders, setRiders] = useState([]);
     useEffect(() =>{
         setRiders(ridersData);
-        console.log(ridersData)
     }, []);
     return (
         <div className="riders-container">

@@ -8,7 +8,6 @@ import {
 import Home from './component/Home/Home';
 import Login from './component/Login/Login';
 import Rider from './component/Rider/Rider';
-import Destination from './component/Destination/Destination';
 import LoginManagement from './component/LoginManagement/LoginManagement';
 import DestinationInfo from './component/DestinationInfo/DestinationInfo';
 

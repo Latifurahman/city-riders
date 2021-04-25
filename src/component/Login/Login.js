@@ -34,13 +34,11 @@ const Login = () => {
     var credential = result.credential;
     var token = credential.accessToken;
     var user = result.user;
-    console.log(user, 'user click')
   }).catch((error) => {
     var errorCode = error.code;
     var errorMessage = error.message;
     var email = error.email;
     var credential = error.credential;
-    console.log(errorCode, errorMessage, email, credential)
   });
     }
 
@@ -52,14 +50,12 @@ const Login = () => {
     var credential = result.credential;
     var user = result.user;
     var accessToken = credential.accessToken;
-    console.log(user, 'fb sign in')
   })
   .catch((error) => {
     var errorCode = error.code;
     var errorMessage = error.message;
     var email = error.email;
     var credential = error.credential;
-    console.log(errorCode, errorMessage, email, credential)
   });
     }
 
