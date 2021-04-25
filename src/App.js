@@ -7,6 +7,8 @@ import {
 } from "react-router-dom";
 import Home from './component/Home/Home';
 import Login from './component/Login/Login';
+import Rider from './component/Rider/Rider';
+import Destination from './component/Destination/Destination';
 
 function App() {
   return (
@@ -18,6 +20,9 @@ function App() {
           </Route>
           <Route path="/login">
             <Login></Login>
+          </Route>
+          <Route path="/rider">
+            <Rider></Rider>
           </Route>
           <Route exact path="/">
             <Home></Home>

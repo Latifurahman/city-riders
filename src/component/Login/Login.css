@@ -30,3 +30,19 @@
     color: red;
     margin-top: -10px;
 }
+.form-bottom button{
+    background-color: #fff;
+    border: 1px solid #ddd;
+    width: 400px;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+.facebook-btn{
+    margin-bottom: 20px;
+}
+.google-btn{
+    color: 	#db3236;
+}

@@ -5,9 +5,16 @@ import CardActionArea from '@material-ui/core/CardActionArea';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
+import { useHistory } from 'react-router';
 
 const Riders = (props) => {
     const {name, image} = props.rider;
+    
+    const history = useHistory();
+
+    const handleRider = () =>{
+      history.push('/login');
+    }
 
     const useStyles = makeStyles({
   root: {
@@ -21,7 +28,7 @@ const Riders = (props) => {
 });
 const classes = useStyles();
     return (
-        <Card className={classes.root}>
+        <Card className={classes.root} onClick={() => handleRider()}>
       <CardActionArea>
         <CardMedia
           className={classes.media}
